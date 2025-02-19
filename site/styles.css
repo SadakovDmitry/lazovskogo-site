@@ -1,0 +1,246 @@
+/* =============================================================================================================================================== */
+/* MAIN */
+/* =============================================================================================================================================== */
+
+.navbar {
+  background-color: #fff !important;
+  padding-left: 7.5%;
+}
+
+.navbar-brand {
+  padding-right: 2%;
+}
+
+.nav-item {
+  width: 10%;
+}
+
+.services {
+  padding: 10%;
+  width: 100%;
+  background-color: rgba(100, 150, 250);
+}
+
+.col {
+  padding: 20px;
+}
+
+/* =============================================================================================================================================== */
+/* CASES */
+/* =============================================================================================================================================== */
+
+/* Основные стили для карточек */
+.card {
+  position: relative;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 1s ease, box-shadow 1s ease; /* Плавный эффект */
+}
+
+/* Эффект тени и подъема при наведении */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 1);
+}
+
+/* Стилизуем текстовую часть карточки */
+.card-body {
+  position: relative;
+  height: 33%;
+  transition: all 1s ease;
+  z-index: 2;
+}
+
+/* Сжимаем текст в 4 раза при наведении */
+.card:hover .card-body {
+  height: 25%;
+}
+
+/* Стили для картинки */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Задаем фиксированную высоту для изображений */
+  object-fit: cover;
+  transition: all 1s ease;
+}
+
+/* Увеличиваем картинку при наведении */
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* Дополнительный стиль для разделителей и отступов */
+.g-4 {
+  gap: 0px;
+}
+
+/* Применяем тень по умолчанию */
+.shadow-custom {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* =============================================================================================================================================== */
+/* PARTNERS */
+/* =============================================================================================================================================== */
+
+/* Стили для блока партнеров */
+.container h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.partners-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.partners-row .col-4,
+.partners-row .col-sm-3,
+.partners-row .col-md-2 {
+  padding: 0 15px;
+}
+
+@media (max-width: 767px) {
+  .partners-row .col-4 {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .partners-row .col-4 {
+    max-width: 100%;
+  }
+}
+
+/* =============================================================================================================================================== */
+/* FORM */
+/* =============================================================================================================================================== */
+
+.form-container {
+  padding-bottom: 5%;
+}
+
+/* Стиль для текста */
+.info-text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.info-text p {
+  font-size: 1rem;
+}
+
+/* Стилизация формы */
+form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+form .btn {
+  width: 100%;
+}
+
+/* Адаптивные стили */
+@media (min-width: 1100px) {
+  .info-text h2 {
+    font-size: 2.5rem; /* Увеличиваем размер текста */
+  }
+
+  .info-text p {
+    font-size: 1.2rem;
+  }
+
+  /* Респонсивный дизайн: при ширине больше 1100px текст занимает левую часть экрана, а форма правую */
+  .custom-form > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .col-lg-6:first-child {
+    flex: 1;
+  }
+
+  .col-lg-6:last-child {
+    flex: 1;
+  }
+}
+
+/* =============================================================================================================================================== */
+/* FOOTER */
+/* =============================================================================================================================================== */
+
+/* Стили для футера */
+footer {
+  /* background-color: rgba(100, 150, 250, 0.5); */
+  background-color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer .container {
+  max-width: 1200px;
+}
+
+footer h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .fa-shield-alt {
+  margin-right: 8px;
+}
+
+/* Отступы для элементов футера */
+footer .row > div {
+  margin-bottom: 1.5rem;
+}
+
+footer .row .col-md-3 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  footer .row {
+    text-align: center;
+  }
+
+  footer .col-md-3 {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пример сайта на Bootstrap</title>
+    <!-- Подключаем CSS файл Bootstrap -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Подключаем ваш CSS файл (он подключается после Bootstrap) -->
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Навигационное меню -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Это сайт</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 d-flex">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <!-- <div class="container mt-4">
+      <h1>Добро пожаловать на мой сайт!</h1>
+      <p>Это пример простого сайта, построенного с использованием Bootstrap.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="../images/photo1.jpg"
+              class="card-img-top"
+              alt="Изображение 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Карточка 1</h5>
+              <p class="card-text">
+                Это пример текста внутри карточки. Мы можем использовать такие
+                компоненты для отображения информации.
+              </p>
+              <a href="#" class="btn btn-primary">Читать далее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="../images/photo2.jpg"
+              class="card-img-top"
+              alt="Изображение 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Карточка 2</h5>
+              <p class="card-text">
+                Вот еще один пример карточки. Bootstrap позволяет быстро создать
+                такие элементы с минимумом кода.
+              </p>
+              <a href="#" class="btn btn-primary">Читать далее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="../images/photo3.jpg"
+              class="card-img-top"
+              alt="Изображение 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Карточка 3</h5>
+              <p class="card-text">
+                Карточки можно использовать для вывода информации, изображений и
+                кнопок. Все это легко стилизуется с помощью Bootstrap.
+              </p>
+              <a href="#" class="btn btn-primary">Читать далее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container-fluid services">
+      <!-- Блок с названием фирмы и списком услуг -->
+      <div class="row">
+        <!-- Левая половина с названием и списком -->
+        <div class="col-md-6">
+          <!-- Название фирмы -->
+          <h1 class="display-4 font-weight-bold">
+            Единый центр помощи застройщику
+          </h1>
+
+          <ul class="mt-4">
+            <li>Проведение сделок через ипотечные программы</li>
+            <li>Безналичное сопровождение закупок</li>
+            <li>Кредитные линии</li>
+            <li>Допуски СРО и др.</li>
+            <li>Участие в аукционах и тендерах</li>
+            <li>Передача наличных заказчиков</li>
+            <li>Организация земельных площадок под строительство</li>
+            <li>Подключение к коммуникациям</li>
+            <li>Проектно-конструктивное сопровождение</li>
+            <li>Юридическое сопровождение</li>
+          </ul>
+        </div>
+
+        <!-- Правая половина с видео -->
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <!-- Видео, расположенное по центру -->
+          <iframe
+            width="560"
+            height="315"
+            src="../video/istockphoto-1170947236-640_adpp_is.mp4"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+        <!-- Карточка 1 -->
+        <div class="col">
+          <div class="card shadow-custom">
+            <div class="card-body text-center">
+              <h5 class="card-title">Заголовок 1</h5>
+            </div>
+            <img
+              src="../images/image1.jpeg"
+              class="card-img-top"
+              alt="Image 1"
+            />
+          </div>
+        </div>
+        <!-- Карточка 2 -->
+        <div class="col">
+          <div class="card shadow-custom">
+            <div class="card-body text-center">
+              <h5 class="card-title">Заголовок 2</h5>
+            </div>
+            <img
+              src="../images/image2.jpeg"
+              class="card-img-top"
+              alt="Image 2"
+            />
+          </div>
+        </div>
+        <!-- Карточка 3 -->
+        <div class="col">
+          <div class="card shadow-custom">
+            <div class="card-body text-center">
+              <h5 class="card-title">Заголовок 3</h5>
+            </div>
+            <img
+              src="../images/image3.jpeg"
+              class="card-img-top"
+              alt="Image 3"
+            />
+          </div>
+        </div>
+        <!-- Карточка 4 -->
+        <div class="col">
+          <div class="card shadow-custom">
+            <div class="card-body text-center">
+              <h5 class="card-title">Заголовок 4</h5>
+            </div>
+            <img
+              src="../images/image4.jpeg"
+              class="card-img-top"
+              alt="Image 4"
+            />
+          </div>
+        </div>
+        <!-- Карточка 5 -->
+        <div class="col">
+          <div class="card shadow-custom">
+            <div class="card-body text-center">
+              <h5 class="card-title">Заголовок 5</h5>
+            </div>
+            <img
+              src="../images/image5.jpeg"
+              class="card-img-top"
+              alt="Image 5"
+            />
+          </div>
+        </div>
+        <!-- Карточка 6 -->
+        <div class="col">
+          <div class="card shadow-custom">
+            <div class="card-body text-center">
+              <h5 class="card-title">Заголовок 6</h5>
+            </div>
+            <img
+              src="../images/image6.jpeg"
+              class="card-img-top"
+              alt="Image 6"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Блок партнеров -->
+    <div class="container mt-5">
+      <h3 class="text-center mb-4">Партнеры</h3>
+      <div class="row justify-content-between partners-row">
+        <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center mb-4">
+          <img
+            src="../images/partner1-logo.jpeg"
+            alt="Партнер 1"
+            class="img-fluid"
+            style="max-width: 150px"
+          />
+        </div>
+        <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center mb-4">
+          <img
+            src="../images/partner2-logo.png"
+            alt="Партнер 2"
+            class="img-fluid"
+            style="max-width: 150px"
+          />
+        </div>
+        <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center mb-4">
+          <img
+            src="../images/partner3-logo.jpg"
+            alt="Партнер 3"
+            class="img-fluid"
+            style="max-width: 150px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5 form-container">
+      <!-- Заголовок и форма -->
+      <div class="row custom-form">
+        <!-- Текст для пользователей -->
+        <div class="col-lg-6">
+          <div class="info-text">
+            <h2>Наши сотрудники свяжутся с вами после заполнения формы</h2>
+            <p>
+              Заполните форму ниже, и наш специалист свяжется с вами для
+              уточнения всех деталей по вашему вопросу.
+            </p>
+          </div>
+        </div>
+
+        <!-- Форма -->
+        <div class="col-lg-6">
+          <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="fullname">Фамилия, имя, отчество</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fullname"
+                placeholder="Введите ваше ФИО"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Введите ваш email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="Введите ваш телефон"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="service">Услуга</label>
+              <select class="form-control" id="service" required>
+                <option>Проведение сделок через ипотечные программы</option>
+                <option>Безналичное сопровождение закупок</option>
+                <option>Кредитные линии</option>
+                <option>Допуски СРО и др.</option>
+                <option>Участие в аукционах и тендерах</option>
+                <option>Передача наличных заказчиков</option>
+                <option>
+                  Организация земельных площадок под строительство
+                </option>
+                <option>Подключение к коммуникациям</option>
+                <option>Проектно-конструктивное сопровождение</option>
+                <option>Юридическое сопровождение</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="question">Ваш вопрос</label>
+              <textarea
+                class="form-control"
+                id="question"
+                rows="4"
+                placeholder="Опишите ваш вопрос"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="file">Прикрепить файл</label>
+              <input type="file" class="form-control-file" id="file" />
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Логотип компании и информация -->
+          <div class="col-md-3">
+            <img
+              src="../images/logo.png"
+              alt="Логотип компании"
+              class="img-fluid"
+              style="max-width: 150px"
+            />
+          </div>
+          <div class="col-md-3">
+            <h5>Телефон</h5>
+            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+          </div>
+          <div class="col-md-3">
+            <h5>Адрес</h5>
+            <p>г. Москва, ул. Примерная, д. 10</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Услуги</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">Проведение сделок через ипотечные программы</a>
+              </li>
+              <li><a href="#">Безналичное сопровождение закупок</a></li>
+              <li><a href="#">Кредитные линии</a></li>
+              <li><a href="#">Юридическое сопровождение</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <!-- Ссылки на страницы -->
+          <div class="col-md-3">
+            <h5>Контакты</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Кейсы компании</a></li>
+            </ul>
+          </div>
+
+          <!-- Политика конфиденциальности -->
+          <div class="col-md-12 mt-4">
+            <p class="text-center">
+              <small>
+                <a href="/privacy-policy" class="text-muted">
+                  <i class="fas fa-shield-alt"></i> Политика конфиденциальности
+                </a>
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Подключаем JS файл Bootstrap -->
+    <script src="../jquery/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="jquery/jquery.min.js"></script> -->
+    <script src="../popper/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
