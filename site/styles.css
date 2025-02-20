@@ -89,7 +89,7 @@
 /* CASES */
 /* =============================================================================================================================================== */
 
-/* Основные стили для карточек */
+/* Основной стиль карточек */
 .card {
   position: relative;
   border: 1px solid #ddd;
@@ -142,10 +142,105 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Стиль для контейнера */
 .container-fluid {
   width: 100%;
   padding-left: 3%;
   padding-right: 3%;
+}
+
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+#modal-image {
+  width: 80%; /* Фото занимает 90% ширины модального окна */
+  height: 60%;
+  max-height: 40vh; /* Ограничение высоты */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  /* margin-top: 20px; */
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  align-items: space-between;
+  width: 100%; /* Описание занимает 2/3 ширины */
+}
+
+.price {
+  font-size: clamp(6px, 2vw, 60px);
+  font-weight: bold;
+  width: 33.3%; /* Блок с ценой занимает 1/3 ширины */
+  min-height: 40%;
+}
+
+.description {
+  font-size: clamp(6px, 1.5vw, 60px);
+  overflow-y: auto;
+  width: 66.3%;
+  max-height: 400px;
+  text-align: justify;
+}
+
+/* Кнопка закрытия */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Размытый фон */
+.blur-background {
+  filter: blur(5px);
+  pointer-events: none;
 }
 
 /* =============================================================================================================================================== */
