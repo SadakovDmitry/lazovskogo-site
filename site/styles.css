@@ -15,14 +15,74 @@
   width: 10%;
 }
 
+/* .services {
+  padding: 10%;
+  width: 100%;
+  background-color: rgba(100, 150, 250, 1);
+} */
+
+/* .col {
+  padding: 20px;
+} */
+
 .services {
   padding: 10%;
   width: 100%;
-  background-color: rgba(100, 150, 250);
+  background-color: rgba(100, 150, 250, 1);
 }
 
-.col {
-  padding: 20px;
+/* Контейнер слайдера */
+.carousel {
+  width: 100%;
+  max-width: 560px; /* Максимальная ширина */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Пропорции 16:9 */
+}
+
+/* Элементы слайдера */
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+/* Картинки полностью покрывают блок */
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Заполняет блок без искажений */
+}
+
+/* Адаптивные кнопки управления */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5vw;
+  height: 5vw;
+  background-color: rgba(0, 0, 0, 0); /* Полупрозрачный фон */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Сдвигаем кнопки за пределы слайдера */
+.carousel-control-prev {
+  left: -5vw;
+}
+
+.carousel-control-next {
+  right: -5vw;
+}
+
+/* Увеличенные иконки стрелок */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 80%;
+  height: 80%;
 }
 
 /* =============================================================================================================================================== */
@@ -104,6 +164,10 @@ img {
   height: auto;
 }
 
+.partners-text {
+  font-size: clamp(6px, 3vw, 60px);
+}
+
 .partners-row {
   display: flex;
   flex-wrap: wrap;
@@ -129,54 +193,214 @@ img {
 }
 
 /* =============================================================================================================================================== */
+/* SMI */
+/* =============================================================================================================================================== */
+
+/* Основной стиль блока */
+.media-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.media-title {
+  font-size: 28px;
+  font-size: clamp(6px, 3vw, 60px);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.media-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Это позволяет переносить элементы на новую строку */
+}
+
+.media-card {
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  height: 350px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.media-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute; /* Картинка будет внутри блока, покрывая весь фон */
+  top: 0;
+  left: 0;
+}
+
+.media-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон для текста */
+  color: #fff;
+  text-align: center;
+}
+
+.media-title-news {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.media-date {
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .media-row {
+    justify-content: center; /* Центрируем карточки на мобильных */
+  }
+
+  .media-card {
+    width: 100%;
+    max-width: 350px; /* Ограничиваем максимальную ширину */
+  }
+}
+
+/* =============================================================================================================================================== */
+/* FAQ */
+/* =============================================================================================================================================== */
+
+.faq-container {
+  /* max-width: 600px; */
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.faq-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(6px, 3vw, 60px);
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-item {
+  background-color: rgba(100, 150, 250, 0.5);
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: clamp(6px, 2vw, 60px);
+}
+
+.faq-icon {
+  font-size: 20px;
+  font-size: clamp(6px, 2vw, 60px);
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  display: none;
+  font-size: 14px;
+  font-size: clamp(6px, 2vw, 60px);
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* =============================================================================================================================================== */
 /* FORM */
 /* =============================================================================================================================================== */
 
-.form-container {
-  padding-bottom: 5%;
+/* .container-fluid {
+  width: 100%;
+  padding: 0 5%;
+} */
+
+.custom-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-/* Стиль для текста */
+.info-text {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding-right: 2%;
+}
+
 .info-text h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .info-text p {
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
-/* Стилизация формы */
+.col-lg-8 {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
 form .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
 }
 
 form .btn {
+  background-color: rgba(100, 150, 250, 1);
   width: 100%;
 }
 
-/* Адаптивные стили */
-@media (min-width: 1100px) {
-  .info-text h2 {
-    font-size: 2.5rem; /* Увеличиваем размер текста */
+@media (max-width: 1100px) {
+  .info-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
   }
 
-  .info-text p {
-    font-size: 1.2rem;
-  }
-
-  /* Респонсивный дизайн: при ширине больше 1100px текст занимает левую часть экрана, а форма правую */
-  .custom-form > div {
-    display: flex;
-    align-items: center;
-  }
-
-  .col-lg-6:first-child {
-    flex: 1;
-  }
-
-  .col-lg-6:last-child {
-    flex: 1;
+  .col-lg-8 {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
