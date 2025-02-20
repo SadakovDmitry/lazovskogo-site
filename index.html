@@ -16,7 +16,8 @@
   <body>
     <!-- Навигационное меню -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Это сайт</a>
+      <!-- <a class="navbar-brand" href="#">Это сайт</a> -->
+      <img src="images/logo.png" class="navbar-brand" href="#"></img>
       <button
         class="navbar-toggler"
         type="button"
@@ -48,7 +49,7 @@
       <!-- Блок с названием фирмы и списком услуг -->
       <div class="row">
         <!-- Левая половина с названием и списком -->
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-left: 10%;">
           <!-- Название фирмы -->
           <h1 class="display-4 font-weight-bold">
             Единый центр помощи застройщику
@@ -123,6 +124,79 @@
       </div>
     </div>
 
+    <!-- Блок с цифрами -->
+    <div class="container mt-5 numbers-block" style="padding-bottom: 100px; padding-top: 50px; width: 80%;">
+      <h3 class="text-center mb-4 partners-text">Наши эксперты</h3>
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+        <!-- Карточка 1 -->
+        <div class="col number-card-col">
+          <div
+            class="card shadow-custom number-card"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-number">15+</h5>
+              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 2 -->
+        <div class="col number-card-col">
+          <div
+            class="card shadow-custom number-card"
+            >
+            <div class="card-body text-center">
+              <h5 class="card-number">18</h5>
+              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 3 -->
+        <div class="col number-card-col">
+          <div
+            class="card shadow-custom number-card"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-number">>30</h5>
+              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 4 -->
+        <div class="col number-card-col">
+          <div
+            class="card shadow-custom number-card"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-number">>100</h5>
+              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 5 -->
+        <div class="col number-card-col">
+          <div
+            class="card shadow-custom number-card"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-number">7</h5>
+              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 6 -->
+        <div class="col number-card-col">
+          <div
+            class="card shadow-custom number-card"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-number">75</h5>
+              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Контейнер с карточками -->
     <div class="container-fluid mt-5">
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
@@ -133,7 +207,7 @@
             onclick="openModal('Заголовок 1', 'images/image1.jpeg', 5000, 'Подробное описание проекта 1')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Заголовок 1</h5>
+              <h5 class="card-title">Проект 1</h5>
             </div>
             <img src="images/image1.jpeg" class="card-img-top" alt="Image 1" />
           </div>
@@ -142,10 +216,10 @@
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Заголовок 2', 'images/image2.jpeg', 6000, 'Подробное описание проекта 2')"
+            onclick="openModal('Проект 2', 'images/image2.jpeg', 6000, 'Подробное описание проекта 2')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Заголовок 2</h5>
+              <h5 class="card-title">Проект 2</h5>
             </div>
             <img src="images/image2.jpeg" class="card-img-top" alt="Image 2" />
           </div>
@@ -154,10 +228,10 @@
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Заголовок 3', 'images/image3.jpeg', 7000, 'Подробное описание проекта 3')"
+            onclick="openModal('Проект 3', 'images/image3.jpeg', 7000, 'Подробное описание проекта 3')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Заголовок 3</h5>
+              <h5 class="card-title">Проект 3</h5>
             </div>
             <img src="images/image3.jpeg" class="card-img-top" alt="Image 3" />
           </div>
@@ -166,10 +240,10 @@
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Заголовок 4', 'images/image4.jpeg', 7000, 'Подробное описание проекта 3')"
+            onclick="openModal('Проект 4', 'images/image4.jpeg', 7000, 'Подробное описание проекта 3')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Заголовок 4</h5>
+              <h5 class="card-title">Проект 4</h5>
             </div>
             <img src="images/image4.jpeg" class="card-img-top" alt="Image 3" />
           </div>
@@ -178,10 +252,10 @@
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Заголовок 5', 'images/image5.jpeg', 7000, 'Подробное описание проекта 3')"
+            onclick="openModal('Проект 5', 'images/image5.jpeg', 7000, 'Подробное описание проекта 3')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Заголовок 5</h5>
+              <h5 class="card-title">Проект 5</h5>
             </div>
             <img src="images/image5.jpeg" class="card-img-top" alt="Image 3" />
           </div>
@@ -190,10 +264,10 @@
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Заголовок 6', 'images/image6.jpeg', 10000000, 'Этот проект дома сочетает современный стиль с функциональностью. Просторные и светлые комнаты обеспечивают комфортное проживание, а продуманная планировка позволяет максимально эффективно использовать пространство. В доме предусмотрены зоны для отдыха и работы, а также большая кухня и гостиная, что создаёт атмосферу уюта и гармонии. Идеально подходит для семьи, ценящей качество и удобство')"
+            onclick="openModal('Проект 6', 'images/image6.jpeg', 10000000, 'Этот проект дома сочетает современный стиль с функциональностью. Просторные и светлые комнаты обеспечивают комфортное проживание, а продуманная планировка позволяет максимально эффективно использовать пространство. В доме предусмотрены зоны для отдыха и работы, а также большая кухня и гостиная, что создаёт атмосферу уюта и гармонии. Идеально подходит для семьи, ценящей качество и удобство')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Заголовок 6</h5>
+              <h5 class="card-title">Проект 6</h5>
             </div>
             <img src="images/image6.jpeg" class="card-img-top" alt="Image 6" />
           </div>
@@ -281,7 +355,7 @@
       </div>
     </div>
 
-    <div class="container media-section">
+    <!-- <div class="container media-section">
       <h2 class="media-title">Мы в СМИ</h2>
       <div class="media-row">
         <div class="media-card" onclick="window.location.href='news1.html'">
@@ -322,7 +396,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="faq-container">
       <h3 class="faq-title">Часто задаваемые вопросы</h3>
@@ -482,10 +556,6 @@
       </div>
     </div>
 
-    <style>
-      /* Основные стили */
-    </style>
-
     <!-- Footer -->
     <footer class="py-4" style="background-color: rgba(100, 150, 250, 0.5)">
       <div class="container-fluid">
@@ -493,10 +563,10 @@
           <!-- Логотип компании и информация -->
           <div class="col-md-3">
             <img
-              src="images/partner2-logo.png"
+              src="images/logo.png"
               alt="Логотип компании"
               class="img-fluid"
-              style="max-width: 150px"
+              style="max-width: 300px"
             />
           </div>
           <div class="col-md-3">
@@ -527,7 +597,7 @@
             <ul class="list-unstyled">
               <li><a href="#">Контакты</a></li>
               <li><a href="#">О нас</a></li>
-              <li><a href="#">Кейсы компании</a></li>
+              <li><a href="#numbers-block">Кейсы компании</a></li>
             </ul>
           </div>
 
