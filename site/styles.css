@@ -50,6 +50,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* Заполняет блок без искажений */
+  aspect-ratio: 14 / 9;
 }
 
 /* Адаптивные кнопки управления */
@@ -316,6 +317,19 @@
 .blur-background {
   filter: blur(5px);
   pointer-events: none;
+}
+
+.last-card {
+  flex: 0 0 auto !important;
+  width: 33.33333333% !important;
+  margin-left: calc(33.33333333%);
+}
+
+@media (max-width: 767px) {
+  .last-card {
+    width: 100% !important;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 767px) {
