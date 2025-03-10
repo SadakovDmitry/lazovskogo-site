@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lazovskogo.ru</title>
     <!-- Подключаем CSS файл Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Подключаем ваш CSS файл (он подключается после Bootstrap) -->
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="site/styles.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
-    />
+    /> -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Подключаем ваш CSS файл (если он не требуется в CDN, оставляем его локально) -->
+    <link href="site/styles.css" rel="stylesheet" />
+
+    <!-- Подключаем FontAwesome через CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <script type="text/javascript" async src="https://app.uiscom.ru/static/cs.min.js?k=e7CKl12B4B0Vb0QKfNnu8mqiwgzUzlE7"></script>
+
   </head>
   <body>
     <!-- Навигационное меню -->
@@ -51,7 +61,7 @@
         <!-- Левая половина с названием и списком -->
         <div class="col-md-6" style="padding-left: 10%;">
           <!-- Название фирмы -->
-          <h1 class="display-4 font-weight-bold">
+          <h1 class="display-4 font-weight-bold title">
             Единый центр помощи застройщику
           </h1>
 
@@ -105,7 +115,7 @@
                 class="carousel-control-prev-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden"></span>
             </button>
             <button
               class="carousel-control-next"
@@ -117,7 +127,7 @@
                 class="carousel-control-next-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden"></span>
             </button>
           </div>
         </div>
@@ -126,7 +136,7 @@
 
     <!-- Блок с цифрами -->
     <div class="container mt-5" id="numbers-block" style="padding-bottom: 100px; padding-top: 50px; width: 80%;">
-      <h3 class="text-center mb-4 partners-text">Наши эксперты</h3>
+      <h3 class="text-center mb-4 partners-text" id="partners-text">Наши эксперты — ваша уверенность в успехе</h3>
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
         <!-- Карточка 1 -->
         <div class="col number-card-col">
@@ -146,7 +156,7 @@
             >
             <div class="card-body text-center">
               <h5 class="card-number">18</h5>
-              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+              <p class="card-number-text">лет средний стаж наших юристов</p>
             </div>
           </div>
         </div>
@@ -157,7 +167,7 @@
           >
             <div class="card-body text-center">
               <h5 class="card-number">>30</h5>
-              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+              <p class="card-number-text">проектов успешно реализовано с нашей помощью</p>
             </div>
           </div>
         </div>
@@ -168,7 +178,7 @@
           >
             <div class="card-body text-center">
               <h5 class="card-number">>100</h5>
-              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+              <p class="card-number-text">документов ежегодно оформляем для наших клиентов</p>
             </div>
           </div>
         </div>
@@ -179,7 +189,7 @@
           >
             <div class="card-body text-center">
               <h5 class="card-number">7</h5>
-              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+              <p class="card-number-text">дней средний срок подготовки пакета документов</p>
             </div>
           </div>
         </div>
@@ -189,8 +199,8 @@
             class="card shadow-custom number-card"
           >
             <div class="card-body text-center">
-              <h5 class="card-number">75</h5>
-              <p class="card-number-text">лет опыта сопровождения правого бизнеса</p>
+              <h5 class="card-number">75%</h5>
+              <p class="card-number-text">клиентов возвращаются к нам за новыми проектами</p>
             </div>
           </div>
         </div>
@@ -204,72 +214,166 @@
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Заголовок 1', 'images/image1.jpeg', 5000, 'Подробное описание проекта 1')"
+            onclick="openModal('Проведение сделок через ипотечные программы',
+                               'images/service1.webp',
+                               '3% от суммы кредита',
+                               '– Анализ условий банков для выбора оптимальной ипотечной программы.<br>– Подготовка пакета документов (финансовая отчетность, правоустанавливающие документы на объект).<br>– Сопровождение переговоров с банком, включая согласование ставки и графика платежей.<br>– Юридическая проверка договора на соответствие нормам',
+                               '– Экономия до 20% за счет льготных программ для застройщиков.<br>– Сокращение сроков одобрения кредита до 7 рабочих дней.',
+                               '')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Проект 1</h5>
+              <h5 class="card-title">Проведение сделок через ипотечные программы</h5>
             </div>
-            <img src="images/image1.jpeg" class="card-img-top" alt="Image 1" />
+            <img src="images/service1.webp" class="card-img-top" alt="Image 1" />
           </div>
         </div>
         <!-- Карточка 2 -->
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Проект 2', 'images/image2.jpeg', 6000, 'Подробное описание проекта 2')"
+            onclick="openModal('Безналичное сопровождение закупок',
+                               'images/service2.webp',
+                               '15 000 ₽/месяц + 0,5% от оборота',
+                               '– Открытие спецсчета для расчетов с поставщиками.<br>– Автоматизация платежей через CRM-систему с контролем лимитов.<br>– Проверка контрагентов на благонадежность (включая проверку по реестру недобросовестных поставщиков).<br>– Формирование электронного архива платежных поручений.',
+                               '– Снижение риска мошенничества на 90%.<br>– Ускорение оплаты счетов до 1 рабочего дня.',
+                               '')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Проект 2</h5>
+              <h5 class="card-title">Безналичное сопровождение закупок</h5>
             </div>
-            <img src="images/image2.jpeg" class="card-img-top" alt="Image 2" />
+            <img src="images/service2.webp" class="card-img-top" alt="Image 2" />
           </div>
         </div>
         <!-- Карточка 3 -->
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Проект 3', 'images/image3.jpeg', 7000, 'Подробное описание проекта 3')"
+            onclick="openModal('Кредитные линии',
+                               'images/service3.webp',
+                               '50 000 ₽ за оформление + 1,2% годовых',
+                               '– Подбор банка с минимальной ставкой и гибким графиком.<br>– Подготовка бизнес-плана и ТЭО для кредитного комитета.<br>– Обеспечение залога (недвижимость, оборудование, поручительство).<br>– Мониторинг использования кредитных средств.',
+                               '– Возобновляемый лимит до 500 млн ₽.<br>– Возможность досрочного погашения без штрафов.',
+                               '')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Проект 3</h5>
+              <h5 class="card-title"> Кредитные линии</h5>
             </div>
-            <img src="images/image3.jpeg" class="card-img-top" alt="Image 3" />
+            <img src="images/service3.webp" class="card-img-top" alt="Image 3" />
           </div>
         </div>
         <!-- Карточка 4 -->
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Проект 4', 'images/image4.jpeg', 7000, 'Подробное описание проекта 3')"
+            onclick="openModal('Допуски СРО и др.',
+                               'images/service4.webp',
+                               'от 75 000 ₽ за допуск',
+                               '– Сбор документов: устав, свидетельства ИНН/ОГРН, дипломы сотрудников.<br>– Подготовка заявки в СРО (строительные, проектные, изыскательские).<br>– Прохождение проверки компетенций сотрудников.<br>– Оформление страхования гражданской ответственности.',
+                               '– Гарантия получения допуска за 14 дней.<br>– Поддержка при внеплановых проверках.',
+                               '')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Проект 4</h5>
+              <h5 class="card-title">Допуски СРО и др.</h5>
             </div>
-            <img src="images/image4.jpeg" class="card-img-top" alt="Image 3" />
+            <img src="images/service4.webp" class="card-img-top" alt="Image 3" />
           </div>
         </div>
         <!-- Карточка 5 -->
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Проект 5', 'images/image5.jpeg', 7000, 'Подробное описание проекта 3')"
+            onclick="openModal('Участие в аукционах и тендерах',
+                               'images/service5.webp',
+                               '45 000 ₽ за тендер + 5% от выигранной суммы',
+                               '– Поиск подходящих тендеров на всех электронных площадках (Сбербанк-АСТ, РТС-тендер).<br>– Подготовка заявки: техническое задание, финансовая документация, обеспечение заявки.<br>– Подача жалоб в ФАС при нарушении процедуры торгов.<br>– Сопровождение исполнения контракта.',
+                               '– Увеличение шансов на победу на 40%.<br>– Возврат обеспечения заявки даже при проигрыше.',
+                               '')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Проект 5</h5>
+              <h5 class="card-title">Участие в аукционах и тендерах</h5>
             </div>
-            <img src="images/image5.jpeg" class="card-img-top" alt="Image 3" />
+            <img src="images/service5.webp" class="card-img-top" alt="Image 3" />
           </div>
         </div>
         <!-- Карточка 6 -->
         <div class="col">
           <div
             class="card shadow-custom"
-            onclick="openModal('Проект 6', 'images/image6.jpeg', 10000000, 'Этот проект дома сочетает современный стиль с функциональностью. Просторные и светлые комнаты обеспечивают комфортное проживание, а продуманная планировка позволяет максимально эффективно использовать пространство. В доме предусмотрены зоны для отдыха и работы, а также большая кухня и гостиная, что создаёт атмосферу уюта и гармонии. Идеально подходит для семьи, ценящей качество и удобство')"
+            onclick="openModal('Передача наличных заказчиков',
+                               'images/service6.webp',
+                               '2% от суммы + 5 000 ₽ за операцию',
+                               '– Организация аккредитива для расчетов с физлицами.<br>– Аренда банковской ячейки для передачи ключей/документов.<br>– Проверка чистоты сделки (отсутствие обременений, судебных споров).<br>– Составление акта приема-передачи.',
+                               '– Гарантия безопасности для обеих сторон.<br>– Снижение риска претензий со стороны налоговой.',
+                               '')"
           >
             <div class="card-body text-center">
-              <h5 class="card-title">Проект 6</h5>
+              <h5 class="card-title">Передача наличных заказчиков</h5>
             </div>
-            <img src="images/image6.jpeg" class="card-img-top" alt="Image 6" />
+            <img src="images/service6.webp" class="card-img-top" alt="Image 6" />
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card shadow-custom"
+            onclick="openModal('Передача наличных заказчиков',
+                               'images/service6.webp',
+                               '2% от суммы + 5 000 ₽ за операцию',
+                               '– Организация аккредитива для расчетов с физлицами.<br>– Аренда банковской ячейки для передачи ключей/документов.<br>– Проверка чистоты сделки (отсутствие обременений, судебных споров).<br>– Составление акта приема-передачи.',
+                               '– Гарантия безопасности для обеих сторон.<br>– Снижение риска претензий со стороны налоговой.',
+                               '')"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-title">Передача наличных заказчиков</h5>
+            </div>
+            <img src="images/service6.webp" class="card-img-top" alt="Image 6" />
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card shadow-custom"
+            onclick="openModal('Передача наличных заказчиков',
+                               'images/service6.webp',
+                               '2% от суммы + 5 000 ₽ за операцию',
+                               '– Организация аккредитива для расчетов с физлицами.<br>– Аренда банковской ячейки для передачи ключей/документов.<br>– Проверка чистоты сделки (отсутствие обременений, судебных споров).<br>– Составление акта приема-передачи.',
+                               '– Гарантия безопасности для обеих сторон.<br>– Снижение риска претензий со стороны налоговой.',
+                               '')"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-title">Передача наличных заказчиков</h5>
+            </div>
+            <img src="images/service6.webp" class="card-img-top" alt="Image 6" />
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card shadow-custom"
+            onclick="openModal('Передача наличных заказчиков',
+                               'images/service6.webp',
+                               '2% от суммы + 5 000 ₽ за операцию',
+                               '– Организация аккредитива для расчетов с физлицами.<br>– Аренда банковской ячейки для передачи ключей/документов.<br>– Проверка чистоты сделки (отсутствие обременений, судебных споров).<br>– Составление акта приема-передачи.',
+                               '– Гарантия безопасности для обеих сторон.<br>– Снижение риска претензий со стороны налоговой.',
+                               '')"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-title">Передача наличных заказчиков</h5>
+            </div>
+            <img src="images/service6.webp" class="card-img-top" alt="Image 6" />
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card shadow-custom"
+            onclick="openModal('Передача наличных заказчиков',
+                               'images/service6.webp',
+                               '2% от суммы + 5 000 ₽ за операцию',
+                               '– Организация аккредитива для расчетов с физлицами.<br>– Аренда банковской ячейки для передачи ключей/документов.<br>– Проверка чистоты сделки (отсутствие обременений, судебных споров).<br>– Составление акта приема-передачи.',
+                               '– Гарантия безопасности для обеих сторон.<br>– Снижение риска претензий со стороны налоговой.',
+                               '')"
+          >
+            <div class="card-body text-center">
+              <h5 class="card-title">Передача наличных заказчиков</h5>
+            </div>
+            <img src="images/service6.webp" class="card-img-top" alt="Image 6" />
           </div>
         </div>
       </div>
@@ -292,13 +396,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      function openModal(title, image, price, description) {
-        document.getElementById("modal-title").textContent = title;
+      function openModal(title, image, price, description, peculiarities, company_role) {
+        // document.getElementById("modal-title").textContent = title;
+        document.getElementById(
+          "modal-title"
+        ).innerHTML = `${title}`;
         document.getElementById("modal-image").src = image;
+        // document.getElementById(
+        //   "modal-price"
+        // ).innerHTML = `Цена: <br>${price} ₽`;
         document.getElementById(
           "modal-price"
-        ).innerHTML = `Цена: <br>${price} ₽`;
-        document.getElementById("modal-description").textContent = description;
+        ).innerHTML = `<b>Цена:</b> <br>${price}`;
+        // document.getElementById("modal-description").textContent = description;
+        document.getElementById(
+          "modal-description"
+        ).innerHTML = `${description}<br><b>Преимущества:</b><br>${peculiarities}${company_role}`;
 
         // Открываем модальное окно
         document.getElementById("modal").style.display = "flex";
@@ -326,14 +439,15 @@
 
     <!-- Блок партнеров -->
     <div class="container mt-5">
-      <h3 class="text-center mb-4 partners-text">Партнеры</h3>
+      <h3 class="text-center mb-4 partners-text" id="partners-text">Партнеры</h3>
       <div class="row justify-content-between partners-row">
         <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center mb-4">
           <img
             src="images/partner1-logo.jpeg"
             alt="Партнер 1"
             class="img-fluid"
-            style="max-width: 150px"
+            id="partners_logo"
+            style=""
           />
         </div>
         <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center mb-4">
@@ -341,7 +455,8 @@
             src="images/partner2-logo.png"
             alt="Партнер 2"
             class="img-fluid"
-            style="max-width: 150px"
+            id="partners_logo"
+            style=""
           />
         </div>
         <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center mb-4">
@@ -349,7 +464,8 @@
             src="images/partner3-logo.jpg"
             alt="Партнер 3"
             class="img-fluid"
-            style="max-width: 150px"
+            id="partners_logo"
+            style=""
           />
         </div>
       </div>
@@ -571,7 +687,7 @@
           </div>
           <div class="col-md-3">
             <h5>Контакты</h5>
-            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><a href="tel:+1234567890">+7 (495) 021-79-39</a></p>
             <p><a href="email:blablaboom@mail.ru">blablaboom@mail.ru</a></p>
           </div>
           <div class="col-md-3">
@@ -594,7 +710,7 @@
         <div class="row mt-4">
           <!-- Ссылки на страницы -->
           <div class="col-md-3">
-            <h5>Контакты</h5>
+            <h5>Ссылки</h5>
             <ul class="list-unstyled">
               <li><a href="#footer-block">Контакты</a></li>
               <li><a href="#numbers-block">О нас</a></li>
@@ -617,9 +733,13 @@
     </footer>
 
     <!-- Подключаем JS файл Bootstrap -->
-    <script src="jquery/jquery-3.5.1.slim.min.js"></script>
-    <!-- <script src="jquery/jquery.min.js"></script> -->
+    <!-- <script src="jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="jquery/jquery.min.js"></script>
     <script src="popper/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
